@@ -1,0 +1,1021 @@
+== CS 241 Autograder Note: ==
+This autograder is a preliminary assessment of your program's correctness. Your
+grade may change UP OR DOWN based on the CORRECTNESS OF YOUR PROGRAM. We make every effort to ensure
+that our autograder is 'smart' enough to not count off for simple things like grammar but, in doing so,
+we may inadvertently allow for incorrect code to be counted as correct. If we have to change our script
+to better reflect the CORRECTNESS OF YOUR PROGRAM, we will run the script on EVERY PROGRAM and update
+EVERY AUTOGRADER OUTPUT to ensure fairness to all students. Thanks for understanding! - CS 241 Staff
+
+(Please note, this autograder does not reflect a late submission penalty. This will be applied on Compass.)
+
+
+=== MPx (Client) Autograder Summary ===
+Program Execution Score (90% weight): 55.0/55.0 (100.0%)
+Program Heap Freed (5% weight): FAILED (0%)
+Correct Memory Usage (5% weight): FAILED (0%)
+
+
+=== MPx (Client) Scoring Breakdown ===
+--- Details for "MPx (Client)" ---
+Total "MPx (Client)" Sub-Score: 55.0
+	... Details for "MPx (Client)", "Is the result of the basic test correct?"...
+	Total "MPx (Client)", "Is the result of the basic test correct?" Sub-Score: 10.0
+		[+10]: Expected output found!
+	... Details for "MPx (Client)", "Is the persistency working?"...
+	Total "MPx (Client)", "Is the persistency working?" Sub-Score: 10.0
+		[+10]: Expected output found!
+	... Details for "MPx (Client)", "Is the GET operation performed correctly?"...
+	Total "MPx (Client)", "Is the GET operation performed correctly?" Sub-Score: 5.0
+		[+5]: GET request succeeded on the server side!
+	... Details for "MPx (Client)", "Is an erroneous GET operation performed correctly?"...
+	Total "MPx (Client)", "Is an erroneous GET operation performed correctly?" Sub-Score: 5.0
+		[+5]: GET request succeeded on the server side!
+	... Details for "MPx (Client)", "Is the PUT operation performed correctly?"...
+	Total "MPx (Client)", "Is the PUT operation performed correctly?" Sub-Score: 5.0
+		[+5]: PUT request succeeded on the server side!
+	... Details for "MPx (Client)", "Is an erroneous PUT operation performed correctly?"...
+	Total "MPx (Client)", "Is an erroneous PUT operation performed correctly?" Sub-Score: 5.0
+		[+5]: PUT request succeeded on the server side!
+	... Details for "MPx (Client)", "Is an UPDATE operation performed correctly?"...
+	Total "MPx (Client)", "Is an UPDATE operation performed correctly?" Sub-Score: 5.0
+		[+5]: UPDATE request succeeded on the server side!
+	... Details for "MPx (Client)", "Is a DELETE operation performed correctly?"...
+	Total "MPx (Client)", "Is a DELETE operation performed correctly?" Sub-Score: 5.0
+		[+5]: DELETE request succeeded on the server side!
+	... Details for "MPx (Client)", "Is an erroneous DELETE operation performed correctly?"...
+	Total "MPx (Client)", "Is an erroneous DELETE operation performed correctly?" Sub-Score: 5.0
+		[+5]: DELETE request succeeded on the server side!
+
+
+
+
+=== MPx (Client) Raw Autograder Log ===
+[config]: Initializing the AssignmentGrader class "mpx_client"...
+[config]: Initializing the SegmentGrader class "mpx_client_1". Loading...
+[config]: Assignment initalization complete!
+[info]: The submission in "../../svn/cs241/tzhang46" for assignment "mpx_client" is ready to be graded. Running grading tasks...
+[info]: Beginning to grade assignment "MPx (Client)"...
+[fine]: Launching assignment-specific code for "MPx (Client)", "MPx (Client)"...
+[finer]: Running command [make] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: gcc -c -g -W -Wall -I. -Ilibs -Ilibjson -Ilibds libmapreduce.c -o libmapreduce.o -Llibjson -lpthread -ljson
+[finest]: [stdout:2]: gcc -c -g -W -Wall -I. -Ilibs -Ilibjson -Ilibds libds/libds.c -o libds.o -Llibjson -lpthread -ljson
+[finest]: [stdout:3]: gcc -c -g -W -Wall -I. -Ilibs -Ilibjson -Ilibds libs/libhttp.c -o libhttp.o -Llibjson -lpthread -ljson
+[finest]: [stdout:4]: gcc -c -g -W -Wall -I. -Ilibs -Ilibjson -Ilibds libs/libdictionary.c -o libdictionary.o -Llibjson -lpthread -ljson
+[finest]: [stdout:5]: gcc -g -W -Wall libmapreduce.o libds.o libhttp.o libdictionary.o test1.c -o test1 -Llibjson -lpthread -ljson
+[finest]: [stdout:6]: chmod +x example_nosql_server
+[finest]: [stdout:7]: gcc -g -W -Wall libmapreduce.o libds.o libhttp.o libdictionary.o test2.c -o test2 -Llibjson -lpthread -ljson
+[finest]: [stderr:1]: test2.c: In function âmapâ:
+[finest]: [stderr:2]: test2.c:16: warning: unused parameter âfdâ
+[finest]: [stderr:3]: test2.c:16: warning: unused parameter âdataâ
+[finest]: [stderr:4]: test2.c: In function âreduceâ:
+[finest]: [stderr:5]: test2.c:21: warning: unused parameter âvalue1â
+[finest]: [stderr:6]: test2.c:21: warning: unused parameter âvalue2â
+[finest]: [stderr:7]: test2.c: In function âmainâ:
+[finest]: [stderr:8]: test2.c:52: warning: assignment discards qualifiers from pointer target type
+[finest]: [stderr:9]: test2.c:69: warning: assignment discards qualifiers from pointer target type
+[fine]: Launching segment-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)"...
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is the result of the basic test correct?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 25691] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test1 localhost 25691] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test1" with exit code = 0.
+[finest]: [stdout:1]: letters: 31
+[finer]: Testing for string "letters: 31" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[finest]: [stderr:1]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:2]: NoSQL: GET request for "letters"
+[finest]: [stderr:3]: NoSQL (GET): "letters" does not exist in the database
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 404 Not Found
+[finest]: [stderr:5]: Content-Type: applications/json
+[finest]: [stderr:6]: Content-Length: 72
+[finest]: [stderr:7]: Connection: keep-alive
+[finest]: [stderr:8]: 
+[finest]: [stderr:9]: {"error":"not found","reason":"The key does not exist in the database."}<<
+[finest]: [stderr:10]: HTTP: PUT /letters HTTP/1.1
+[finest]: [stderr:11]: NoSQL: PUT request for "letters"
+[finest]: [stderr:12]: NoSQL (PUT): Adding to the database "letters"="31".
+[finest]: [stderr:13]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:14]: Etag: "1"
+[finest]: [stderr:15]: Content-Type: applications/json
+[finest]: [stderr:16]: Content-Length: 36
+[finest]: [stderr:17]: Connection: keep-alive
+[finest]: [stderr:18]: 
+[finest]: [stderr:19]: {"ok":true,"id":"letters","rev":"1"}<<
+[finest]: [stderr:20]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:21]: NoSQL: GET request for "letters"
+[finest]: [stderr:22]: NoSQL (GET): "letters" contains the value "31" (revision: 1)
+[finest]: [stderr:23]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:24]: Etag: "1"
+[finest]: [stderr:25]: Content-Type: applications/json
+[finest]: [stderr:26]: Content-Length: 41
+[finest]: [stderr:27]: Connection: keep-alive
+[finest]: [stderr:28]: 
+[finest]: [stderr:29]: {"_id":"letters","_rev":"1","Value":"31"}<<
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is the persistency working?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 11125] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test1 localhost 11125] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test1" with exit code = 0.
+[finest]: [stdout:1]: letters: 31
+[finer]: Running command [mpx_client-autograde/test1 localhost 11125] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test1" with exit code = 0.
+[finest]: [stdout:1]: letters: 62
+[finer]: Testing for string "letters: 62" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[finest]: [stderr:1]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:2]: NoSQL: GET request for "letters"
+[finest]: [stderr:3]: NoSQL (GET): "letters" does not exist in the database
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 404 Not Found
+[finest]: [stderr:5]: Content-Type: applications/json
+[finest]: [stderr:6]: Content-Length: 72
+[finest]: [stderr:7]: Connection: keep-alive
+[finest]: [stderr:8]: 
+[finest]: [stderr:9]: {"error":"not found","reason":"The key does not exist in the database."}<<
+[finest]: [stderr:10]: HTTP: PUT /letters HTTP/1.1
+[finest]: [stderr:11]: NoSQL: PUT request for "letters"
+[finest]: [stderr:12]: NoSQL (PUT): Adding to the database "letters"="31".
+[finest]: [stderr:13]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:14]: Etag: "1"
+[finest]: [stderr:15]: Content-Type: applications/json
+[finest]: [stderr:16]: Content-Length: 36
+[finest]: [stderr:17]: Connection: keep-alive
+[finest]: [stderr:18]: 
+[finest]: [stderr:19]: {"ok":true,"id":"letters","rev":"1"}<<
+[finest]: [stderr:20]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:21]: NoSQL: GET request for "letters"
+[finest]: [stderr:22]: NoSQL (GET): "letters" contains the value "31" (revision: 1)
+[finest]: [stderr:23]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:24]: Etag: "1"
+[finest]: [stderr:25]: Content-Type: applications/json
+[finest]: [stderr:26]: Content-Length: 41
+[finest]: [stderr:27]: Connection: keep-alive
+[finest]: [stderr:28]: 
+[finest]: [stderr:29]: {"_id":"letters","_rev":"1","Value":"31"}<<
+[finest]: [stderr:30]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:31]: NoSQL: GET request for "letters"
+[finest]: [stderr:32]: NoSQL (GET): "letters" contains the value "31" (revision: 1)
+[finest]: [stderr:33]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:34]: Etag: "1"
+[finest]: [stderr:35]: Content-Type: applications/json
+[finest]: [stderr:36]: Content-Length: 41
+[finest]: [stderr:37]: Connection: keep-alive
+[finest]: [stderr:38]: 
+[finest]: [stderr:39]: {"_id":"letters","_rev":"1","Value":"31"}<<
+[finest]: [stderr:40]: HTTP: PUT /letters HTTP/1.1
+[finest]: [stderr:41]: NoSQL: PUT request for "letters"
+[finest]: [stderr:42]: NoSQL (PUT): Updating database "letters"="62" using revision 1.
+[finest]: [stderr:43]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:44]: Etag: "2"
+[finest]: [stderr:45]: Content-Type: applications/json
+[finest]: [stderr:46]: Content-Length: 36
+[finest]: [stderr:47]: Connection: keep-alive
+[finest]: [stderr:48]: 
+[finest]: [stderr:49]: {"ok":true,"id":"letters","rev":"2"}<<
+[finest]: [stderr:50]: HTTP: GET /letters HTTP/1.1
+[finest]: [stderr:51]: NoSQL: GET request for "letters"
+[finest]: [stderr:52]: NoSQL (GET): "letters" contains the value "62" (revision: 2)
+[finest]: [stderr:53]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:54]: Etag: "2"
+[finest]: [stderr:55]: Content-Type: applications/json
+[finest]: [stderr:56]: Content-Length: 41
+[finest]: [stderr:57]: Connection: keep-alive
+[finest]: [stderr:58]: 
+[finest]: [stderr:59]: {"_id":"letters","_rev":"2","Value":"62"}<<
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is the GET operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 29091] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 29091 GET] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: GET /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: GET request for "new_key"
+[finest]: [stderr:13]: NoSQL (GET): "new_key" contains the value "new_value" (revision: 1)
+[finest]: [stderr:14]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:15]: Etag: "1"
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 48
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"_id":"new_key","_rev":"1","Value":"new_value"}<<
+[finer]: Testing for string "HTTP/1.1 200 OK" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is an erroneous GET operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 11294] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 11294 ERR_GET] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: GET /no_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: GET request for "no_key"
+[finest]: [stderr:3]: NoSQL (GET): "no_key" does not exist in the database
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 404 Not Found
+[finest]: [stderr:5]: Content-Type: applications/json
+[finest]: [stderr:6]: Content-Length: 72
+[finest]: [stderr:7]: Connection: keep-alive
+[finest]: [stderr:8]: 
+[finest]: [stderr:9]: {"error":"not found","reason":"The key does not exist in the database."}<<
+[finer]: Testing for string "HTTP/1.1 404 Not Found" in process output.
+[finer]: String found in line 4 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is the PUT operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 27365] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 27365 PUT] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finer]: Testing for string "HTTP/1.1 201 Created" in process output.
+[finer]: String found in line 4 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is an erroneous PUT operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 21875] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 21875 ERR_PUT] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:13]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:14]: NoSQL (PUT): Document update conflict.
+[finest]: [stderr:15]: SENDING >>HTTP/1.1 409 Conflict
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 57
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"error":"conflict","reason":"Document update conflict."}<<
+[finer]: Testing for string "HTTP/1.1 409 Conflict" in process output.
+[finer]: String found in line 15 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is an UPDATE operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 12003] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 12003 UPDATE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="old_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:13]: NoSQL (PUT): Updating database "new_key"="new_value" using revision 1.
+[finest]: [stderr:14]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:15]: Etag: "2"
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 36
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"ok":true,"id":"new_key","rev":"2"}<<
+[finer]: Testing for string "HTTP/1.1 201 Created" in process output.
+[finer]: String found in line 4 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is a DELETE operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 25147] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 25147 DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="old_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: DELETE /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: DELETE request for "new_key"
+[finest]: [stderr:13]: NoSQL (DELETE): Deleting "new_key" using revision 1.
+[finest]: [stderr:14]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:15]: Etag: "1"
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 21
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"ok":true,"rev":"1"}<<
+[finer]: Testing for string "HTTP/1.1 200 OK" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: Launching element-specific code for "MPx (Client)", "MPx (Client)", "MPx (Client)", "Is an erroneous DELETE operation performed correctly?"...
+[finer]: Running command [mpx_client-autograde/example_nosql_server 21988] with a timeout of 15000ms.
+[finer]: Running command [mpx_client-autograde/test2 localhost 21988 ERR_DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_client-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 1 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Stream closed)
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="old_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: DELETE /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: DELETE request for "new_key"
+[finest]: [stderr:13]: NoSQL (DELETE): Deleting "new_key" using revision 0.
+[finest]: [stderr:14]: NoSQL (DELETE): Revision number was out of date.SENDING >>HTTP/1.1 409 Conflict
+[finest]: [stderr:15]: Content-Type: applications/json
+[finest]: [stderr:16]: Content-Length: 64
+[finest]: [stderr:17]: Connection: keep-alive
+[finest]: [stderr:18]: 
+[finest]: [stderr:19]: {"error":"conflict","reason":"Revision number was out of date."}<<
+[finer]: Testing for string "HTTP/1.1 409 Conflict" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: Launching memory grader code for "MPx (Client)"...
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mpx_client-autograde/test2 localhost 18077 GET] with a timeout of 10000ms.
+[finer]: Running command [mpx_client-autograde/example_nosql_server 18077] with a timeout of 15000ms.
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finest]: [stderr:1]: ==17131== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==17131== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==17131== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==17131== Command: mpx_client-autograde/test2 localhost 18077 GET
+[finest]: [stderr:5]: ==17131== 
+[finest]: [stderr:6]: ==17131== 
+[finest]: [stderr:7]: ==17131== HEAP SUMMARY:
+[finest]: [stderr:8]: ==17131==     in use at exit: 1,502 bytes in 58 blocks
+[finest]: [stderr:9]: ==17131==   total heap usage: 133 allocs, 75 frees, 10,601 bytes allocated
+[finest]: [stderr:10]: ==17131== 
+[finest]: [stderr:11]: ==17131== 10 bytes in 2 blocks are indirectly lost in loss record 1 of 27
+[finest]: [stderr:12]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:13]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:14]: ==17131==    by 0x405B17: jsonp_strdup (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:15]: ==17131==    by 0x407A49: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:16]: ==17131==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:17]: ==17131==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:18]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:19]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:20]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:21]: ==17131==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:22]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:23]: ==17131== 
+[finest]: [stderr:24]: ==17131== 10 bytes in 2 blocks are indirectly lost in loss record 2 of 27
+[finest]: [stderr:25]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:26]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:27]: ==17131==    by 0x405B17: jsonp_strdup (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:28]: ==17131==    by 0x407A49: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:29]: ==17131==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:30]: ==17131==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:31]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:32]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:33]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:34]: ==17131==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:35]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:36]: ==17131== 
+[finest]: [stderr:37]: ==17131== 16 bytes in 1 blocks are definitely lost in loss record 3 of 27
+[finest]: [stderr:38]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:39]: ==17131==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:40]: ==17131==    by 0x402E5E: http_read (libhttp.c:52)
+[finest]: [stderr:41]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:42]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:43]: ==17131== 
+[finest]: [stderr:44]: ==17131== 21 bytes in 1 blocks are definitely lost in loss record 4 of 27
+[finest]: [stderr:45]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:46]: ==17131==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:47]: ==17131==    by 0x402E5E: http_read (libhttp.c:52)
+[finest]: [stderr:48]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:49]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:50]: ==17131== 
+[finest]: [stderr:51]: ==17131== 22 bytes in 1 blocks are definitely lost in loss record 5 of 27
+[finest]: [stderr:52]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:53]: ==17131==    by 0x3DD3A6F6DF: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:54]: ==17131==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:55]: ==17131==    by 0x40232E: datastore_put (libds.c:134)
+[finest]: [stderr:56]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:57]: ==17131== 
+[finest]: [stderr:58]: ==17131== 26 bytes in 1 blocks are definitely lost in loss record 6 of 27
+[finest]: [stderr:59]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:60]: ==17131==    by 0x3DD3A6F6DF: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:61]: ==17131==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:62]: ==17131==    by 0x40262B: datastore_get (libds.c:236)
+[finest]: [stderr:63]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:64]: ==17131== 
+[finest]: [stderr:65]: ==17131== 36 bytes in 4 blocks are indirectly lost in loss record 7 of 27
+[finest]: [stderr:66]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:67]: ==17131==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:68]: ==17131==    by 0x402ED1: http_read (libhttp.c:64)
+[finest]: [stderr:69]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:70]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:71]: ==17131== 
+[finest]: [stderr:72]: ==17131== 36 bytes in 4 blocks are indirectly lost in loss record 8 of 27
+[finest]: [stderr:73]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:74]: ==17131==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:75]: ==17131==    by 0x402ED1: http_read (libhttp.c:64)
+[finest]: [stderr:76]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:77]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:78]: ==17131== 
+[finest]: [stderr:79]: ==17131== 37 bytes in 1 blocks are definitely lost in loss record 9 of 27
+[finest]: [stderr:80]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:81]: ==17131==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:82]: ==17131==    by 0x403049: http_read (libhttp.c:94)
+[finest]: [stderr:83]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:84]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:85]: ==17131== 
+[finest]: [stderr:86]: ==17131== 44 bytes in 4 blocks are indirectly lost in loss record 10 of 27
+[finest]: [stderr:87]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:88]: ==17131==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:89]: ==17131==    by 0x402EE1: http_read (libhttp.c:63)
+[finest]: [stderr:90]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:91]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:92]: ==17131== 
+[finest]: [stderr:93]: ==17131== 44 bytes in 4 blocks are indirectly lost in loss record 11 of 27
+[finest]: [stderr:94]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:95]: ==17131==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:96]: ==17131==    by 0x402EE1: http_read (libhttp.c:63)
+[finest]: [stderr:97]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:98]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:99]: ==17131== 
+[finest]: [stderr:100]: ==17131== 48 bytes in 2 blocks are indirectly lost in loss record 12 of 27
+[finest]: [stderr:101]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:102]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:103]: ==17131==    by 0x407A1A: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:104]: ==17131==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:105]: ==17131==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:106]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:107]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:108]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:109]: ==17131==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:110]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:111]: ==17131== 
+[finest]: [stderr:112]: ==17131== 49 bytes in 1 blocks are definitely lost in loss record 13 of 27
+[finest]: [stderr:113]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:114]: ==17131==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:115]: ==17131==    by 0x403049: http_read (libhttp.c:94)
+[finest]: [stderr:116]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:117]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:118]: ==17131== 
+[finest]: [stderr:119]: ==17131== 64 bytes in 4 blocks are indirectly lost in loss record 14 of 27
+[finest]: [stderr:120]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:121]: ==17131==    by 0x403190: malloc_entry_t (libdictionary.c:24)
+[finest]: [stderr:122]: ==17131==    by 0x403396: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:123]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:124]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:125]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:126]: ==17131== 
+[finest]: [stderr:127]: ==17131== 64 bytes in 4 blocks are indirectly lost in loss record 15 of 27
+[finest]: [stderr:128]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:129]: ==17131==    by 0x403190: malloc_entry_t (libdictionary.c:24)
+[finest]: [stderr:130]: ==17131==    by 0x403396: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:131]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:132]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:133]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:134]: ==17131== 
+[finest]: [stderr:135]: ==17131== 72 bytes in 3 blocks are indirectly lost in loss record 16 of 27
+[finest]: [stderr:136]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:137]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:138]: ==17131==    by 0x407A1A: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:139]: ==17131==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:140]: ==17131==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:141]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:142]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:143]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:144]: ==17131==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:145]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:146]: ==17131== 
+[finest]: [stderr:147]: ==17131== 78 bytes in 1 blocks are definitely lost in loss record 17 of 27
+[finest]: [stderr:148]: ==17131==    at 0x4A06BE0: realloc (vg_replace_malloc.c:662)
+[finest]: [stderr:149]: ==17131==    by 0x3DD3A6F692: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:150]: ==17131==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:151]: ==17131==    by 0x40235D: datastore_put (libds.c:135)
+[finest]: [stderr:152]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:153]: ==17131== 
+[finest]: [stderr:154]: ==17131== 80 bytes in 1 blocks are indirectly lost in loss record 18 of 27
+[finest]: [stderr:155]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:156]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:157]: ==17131==    by 0x408BAE: hashtable_init (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:158]: ==17131==    by 0x4066F1: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:159]: ==17131==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:160]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:161]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:162]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:163]: ==17131==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:164]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:165]: ==17131== 
+[finest]: [stderr:166]: ==17131== 80 bytes in 1 blocks are indirectly lost in loss record 19 of 27
+[finest]: [stderr:167]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:168]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:169]: ==17131==    by 0x408BAE: hashtable_init (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:170]: ==17131==    by 0x4066F1: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:171]: ==17131==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:172]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:173]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:174]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:175]: ==17131==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:176]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:177]: ==17131== 
+[finest]: [stderr:178]: ==17131== 96 bytes in 3 blocks are indirectly lost in loss record 20 of 27
+[finest]: [stderr:179]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:180]: ==17131==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:181]: ==17131==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:182]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:183]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:184]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:185]: ==17131== 
+[finest]: [stderr:186]: ==17131== 96 bytes in 3 blocks are indirectly lost in loss record 21 of 27
+[finest]: [stderr:187]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:188]: ==17131==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:189]: ==17131==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:190]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:191]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:192]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:193]: ==17131== 
+[finest]: [stderr:194]: ==17131== 130 bytes in 3 blocks are indirectly lost in loss record 22 of 27
+[finest]: [stderr:195]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:196]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:197]: ==17131==    by 0x408D59: hashtable_set (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:198]: ==17131==    by 0x40685F: json_object_set_new_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:199]: ==17131==    by 0x403A2C: json_object_set_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:200]: ==17131==    by 0x40504C: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:201]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:202]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:203]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:204]: ==17131==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:205]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:206]: ==17131== 
+[finest]: [stderr:207]: ==17131== 135 bytes in 3 blocks are indirectly lost in loss record 23 of 27
+[finest]: [stderr:208]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:209]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:210]: ==17131==    by 0x408D59: hashtable_set (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:211]: ==17131==    by 0x40685F: json_object_set_new_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:212]: ==17131==    by 0x403A2C: json_object_set_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:213]: ==17131==    by 0x40504C: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:214]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:215]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:216]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:217]: ==17131==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:218]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:219]: ==17131== 
+[finest]: [stderr:220]: ==17131== 272 (32 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 24 of 27
+[finest]: [stderr:221]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:222]: ==17131==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:223]: ==17131==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:224]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:225]: ==17131==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:226]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:227]: ==17131== 
+[finest]: [stderr:228]: ==17131== 272 (32 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 25 of 27
+[finest]: [stderr:229]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:230]: ==17131==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:231]: ==17131==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:232]: ==17131==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:233]: ==17131==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:234]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:235]: ==17131== 
+[finest]: [stderr:236]: ==17131== 340 (72 direct, 268 indirect) bytes in 1 blocks are definitely lost in loss record 26 of 27
+[finest]: [stderr:237]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:238]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:239]: ==17131==    by 0x4066BE: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:240]: ==17131==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:241]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:242]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:243]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:244]: ==17131==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:245]: ==17131==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:246]: ==17131== 
+[finest]: [stderr:247]: ==17131== 369 (72 direct, 297 indirect) bytes in 1 blocks are definitely lost in loss record 27 of 27
+[finest]: [stderr:248]: ==17131==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:249]: ==17131==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:250]: ==17131==    by 0x4066BE: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:251]: ==17131==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:252]: ==17131==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:253]: ==17131==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:254]: ==17131==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:255]: ==17131==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:256]: ==17131==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:257]: ==17131== 
+[finest]: [stderr:258]: ==17131== LEAK SUMMARY:
+[finest]: [stderr:259]: ==17131==    definitely lost: 457 bytes in 11 blocks
+[finest]: [stderr:260]: ==17131==    indirectly lost: 1,045 bytes in 47 blocks
+[finest]: [stderr:261]: ==17131==      possibly lost: 0 bytes in 0 blocks
+[finest]: [stderr:262]: ==17131==    still reachable: 0 bytes in 0 blocks
+[finest]: [stderr:263]: ==17131==         suppressed: 0 bytes in 0 blocks
+[finest]: [stderr:264]: ==17131== 
+[finest]: [stderr:265]: ==17131== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:266]: ==17131== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: GET /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: GET request for "new_key"
+[finest]: [stderr:13]: NoSQL (GET): "new_key" contains the value "new_value" (revision: 1)
+[finest]: [stderr:14]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:15]: Etag: "1"
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 48
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"_id":"new_key","_rev":"1","Value":"new_value"}<<
+[warning]: Not all memory was freed by target program!
+[fine]: Launching memory grader code for "MPx (Client)"...
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mpx_client-autograde/test2 localhost 25958 GET] with a timeout of 10000ms.
+[finer]: Running command [mpx_client-autograde/example_nosql_server 25958] with a timeout of 15000ms.
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: Correct value returned
+[finest]: [stderr:1]: ==17169== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==17169== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==17169== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==17169== Command: mpx_client-autograde/test2 localhost 25958 GET
+[finest]: [stderr:5]: ==17169== 
+[finest]: [stderr:6]: ==17169== 
+[finest]: [stderr:7]: ==17169== HEAP SUMMARY:
+[finest]: [stderr:8]: ==17169==     in use at exit: 1,502 bytes in 58 blocks
+[finest]: [stderr:9]: ==17169==   total heap usage: 133 allocs, 75 frees, 10,601 bytes allocated
+[finest]: [stderr:10]: ==17169== 
+[finest]: [stderr:11]: ==17169== 10 bytes in 2 blocks are indirectly lost in loss record 1 of 27
+[finest]: [stderr:12]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:13]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:14]: ==17169==    by 0x405B17: jsonp_strdup (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:15]: ==17169==    by 0x407A49: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:16]: ==17169==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:17]: ==17169==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:18]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:19]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:20]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:21]: ==17169==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:22]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:23]: ==17169== 
+[finest]: [stderr:24]: ==17169== 10 bytes in 2 blocks are indirectly lost in loss record 2 of 27
+[finest]: [stderr:25]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:26]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:27]: ==17169==    by 0x405B17: jsonp_strdup (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:28]: ==17169==    by 0x407A49: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:29]: ==17169==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:30]: ==17169==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:31]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:32]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:33]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:34]: ==17169==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:35]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:36]: ==17169== 
+[finest]: [stderr:37]: ==17169== 16 bytes in 1 blocks are definitely lost in loss record 3 of 27
+[finest]: [stderr:38]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:39]: ==17169==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:40]: ==17169==    by 0x402E5E: http_read (libhttp.c:52)
+[finest]: [stderr:41]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:42]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:43]: ==17169== 
+[finest]: [stderr:44]: ==17169== 21 bytes in 1 blocks are definitely lost in loss record 4 of 27
+[finest]: [stderr:45]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:46]: ==17169==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:47]: ==17169==    by 0x402E5E: http_read (libhttp.c:52)
+[finest]: [stderr:48]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:49]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:50]: ==17169== 
+[finest]: [stderr:51]: ==17169== 22 bytes in 1 blocks are definitely lost in loss record 5 of 27
+[finest]: [stderr:52]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:53]: ==17169==    by 0x3DD3A6F6DF: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:54]: ==17169==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:55]: ==17169==    by 0x40232E: datastore_put (libds.c:134)
+[finest]: [stderr:56]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:57]: ==17169== 
+[finest]: [stderr:58]: ==17169== 26 bytes in 1 blocks are definitely lost in loss record 6 of 27
+[finest]: [stderr:59]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:60]: ==17169==    by 0x3DD3A6F6DF: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:61]: ==17169==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:62]: ==17169==    by 0x40262B: datastore_get (libds.c:236)
+[finest]: [stderr:63]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:64]: ==17169== 
+[finest]: [stderr:65]: ==17169== 36 bytes in 4 blocks are indirectly lost in loss record 7 of 27
+[finest]: [stderr:66]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:67]: ==17169==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:68]: ==17169==    by 0x402ED1: http_read (libhttp.c:64)
+[finest]: [stderr:69]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:70]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:71]: ==17169== 
+[finest]: [stderr:72]: ==17169== 36 bytes in 4 blocks are indirectly lost in loss record 8 of 27
+[finest]: [stderr:73]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:74]: ==17169==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:75]: ==17169==    by 0x402ED1: http_read (libhttp.c:64)
+[finest]: [stderr:76]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:77]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:78]: ==17169== 
+[finest]: [stderr:79]: ==17169== 37 bytes in 1 blocks are definitely lost in loss record 9 of 27
+[finest]: [stderr:80]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:81]: ==17169==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:82]: ==17169==    by 0x403049: http_read (libhttp.c:94)
+[finest]: [stderr:83]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:84]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:85]: ==17169== 
+[finest]: [stderr:86]: ==17169== 44 bytes in 4 blocks are indirectly lost in loss record 10 of 27
+[finest]: [stderr:87]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:88]: ==17169==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:89]: ==17169==    by 0x402EE1: http_read (libhttp.c:63)
+[finest]: [stderr:90]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:91]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:92]: ==17169== 
+[finest]: [stderr:93]: ==17169== 44 bytes in 4 blocks are indirectly lost in loss record 11 of 27
+[finest]: [stderr:94]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:95]: ==17169==    by 0x3DD3A81041: strdup (in /lib64/libc-2.12.so)
+[finest]: [stderr:96]: ==17169==    by 0x402EE1: http_read (libhttp.c:63)
+[finest]: [stderr:97]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:98]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:99]: ==17169== 
+[finest]: [stderr:100]: ==17169== 48 bytes in 2 blocks are indirectly lost in loss record 12 of 27
+[finest]: [stderr:101]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:102]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:103]: ==17169==    by 0x407A1A: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:104]: ==17169==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:105]: ==17169==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:106]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:107]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:108]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:109]: ==17169==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:110]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:111]: ==17169== 
+[finest]: [stderr:112]: ==17169== 49 bytes in 1 blocks are definitely lost in loss record 13 of 27
+[finest]: [stderr:113]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:114]: ==17169==    by 0x3DD3A810A1: strndup (in /lib64/libc-2.12.so)
+[finest]: [stderr:115]: ==17169==    by 0x403049: http_read (libhttp.c:94)
+[finest]: [stderr:116]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:117]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:118]: ==17169== 
+[finest]: [stderr:119]: ==17169== 64 bytes in 4 blocks are indirectly lost in loss record 14 of 27
+[finest]: [stderr:120]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:121]: ==17169==    by 0x403190: malloc_entry_t (libdictionary.c:24)
+[finest]: [stderr:122]: ==17169==    by 0x403396: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:123]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:124]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:125]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:126]: ==17169== 
+[finest]: [stderr:127]: ==17169== 64 bytes in 4 blocks are indirectly lost in loss record 15 of 27
+[finest]: [stderr:128]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:129]: ==17169==    by 0x403190: malloc_entry_t (libdictionary.c:24)
+[finest]: [stderr:130]: ==17169==    by 0x403396: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:131]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:132]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:133]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:134]: ==17169== 
+[finest]: [stderr:135]: ==17169== 72 bytes in 3 blocks are indirectly lost in loss record 16 of 27
+[finest]: [stderr:136]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:137]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:138]: ==17169==    by 0x407A1A: json_string_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:139]: ==17169==    by 0x4052CC: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:140]: ==17169==    by 0x405019: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:141]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:142]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:143]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:144]: ==17169==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:145]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:146]: ==17169== 
+[finest]: [stderr:147]: ==17169== 78 bytes in 1 blocks are definitely lost in loss record 17 of 27
+[finest]: [stderr:148]: ==17169==    at 0x4A06BE0: realloc (vg_replace_malloc.c:662)
+[finest]: [stderr:149]: ==17169==    by 0x3DD3A6F692: vasprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:150]: ==17169==    by 0x3DD3A4F5C7: asprintf (in /lib64/libc-2.12.so)
+[finest]: [stderr:151]: ==17169==    by 0x40235D: datastore_put (libds.c:135)
+[finest]: [stderr:152]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:153]: ==17169== 
+[finest]: [stderr:154]: ==17169== 80 bytes in 1 blocks are indirectly lost in loss record 18 of 27
+[finest]: [stderr:155]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:156]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:157]: ==17169==    by 0x408BAE: hashtable_init (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:158]: ==17169==    by 0x4066F1: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:159]: ==17169==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:160]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:161]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:162]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:163]: ==17169==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:164]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:165]: ==17169== 
+[finest]: [stderr:166]: ==17169== 80 bytes in 1 blocks are indirectly lost in loss record 19 of 27
+[finest]: [stderr:167]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:168]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:169]: ==17169==    by 0x408BAE: hashtable_init (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:170]: ==17169==    by 0x4066F1: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:171]: ==17169==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:172]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:173]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:174]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:175]: ==17169==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:176]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:177]: ==17169== 
+[finest]: [stderr:178]: ==17169== 96 bytes in 3 blocks are indirectly lost in loss record 20 of 27
+[finest]: [stderr:179]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:180]: ==17169==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:181]: ==17169==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:182]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:183]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:184]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:185]: ==17169== 
+[finest]: [stderr:186]: ==17169== 96 bytes in 3 blocks are indirectly lost in loss record 21 of 27
+[finest]: [stderr:187]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:188]: ==17169==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:189]: ==17169==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:190]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:191]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:192]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:193]: ==17169== 
+[finest]: [stderr:194]: ==17169== 130 bytes in 3 blocks are indirectly lost in loss record 22 of 27
+[finest]: [stderr:195]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:196]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:197]: ==17169==    by 0x408D59: hashtable_set (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:198]: ==17169==    by 0x40685F: json_object_set_new_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:199]: ==17169==    by 0x403A2C: json_object_set_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:200]: ==17169==    by 0x40504C: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:201]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:202]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:203]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:204]: ==17169==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:205]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:206]: ==17169== 
+[finest]: [stderr:207]: ==17169== 135 bytes in 3 blocks are indirectly lost in loss record 23 of 27
+[finest]: [stderr:208]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:209]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:210]: ==17169==    by 0x408D59: hashtable_set (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:211]: ==17169==    by 0x40685F: json_object_set_new_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:212]: ==17169==    by 0x403A2C: json_object_set_nocheck (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:213]: ==17169==    by 0x40504C: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:214]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:215]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:216]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:217]: ==17169==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:218]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:219]: ==17169== 
+[finest]: [stderr:220]: ==17169== 272 (32 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 24 of 27
+[finest]: [stderr:221]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:222]: ==17169==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:223]: ==17169==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:224]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:225]: ==17169==    by 0x4024AF: datastore_put (libds.c:176)
+[finest]: [stderr:226]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:227]: ==17169== 
+[finest]: [stderr:228]: ==17169== 272 (32 direct, 240 indirect) bytes in 1 blocks are definitely lost in loss record 25 of 27
+[finest]: [stderr:229]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:230]: ==17169==    by 0x3DD3AE6CE1: tsearch (in /lib64/libc-2.12.so)
+[finest]: [stderr:231]: ==17169==    by 0x4033A6: dictionary_add (libdictionary.c:108)
+[finest]: [stderr:232]: ==17169==    by 0x402F03: http_read (libhttp.c:62)
+[finest]: [stderr:233]: ==17169==    by 0x4026E3: datastore_get (libds.c:262)
+[finest]: [stderr:234]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:235]: ==17169== 
+[finest]: [stderr:236]: ==17169== 340 (72 direct, 268 indirect) bytes in 1 blocks are definitely lost in loss record 26 of 27
+[finest]: [stderr:237]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:238]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:239]: ==17169==    by 0x4066BE: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:240]: ==17169==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:241]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:242]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:243]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:244]: ==17169==    by 0x402540: datastore_put (libds.c:191)
+[finest]: [stderr:245]: ==17169==    by 0x4037BE: main (test2.c:68)
+[finest]: [stderr:246]: ==17169== 
+[finest]: [stderr:247]: ==17169== 369 (72 direct, 297 indirect) bytes in 1 blocks are definitely lost in loss record 27 of 27
+[finest]: [stderr:248]: ==17169==    at 0x4A069EE: malloc (vg_replace_malloc.c:270)
+[finest]: [stderr:249]: ==17169==    by 0x405AC9: jsonp_malloc (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:250]: ==17169==    by 0x4066BE: json_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:251]: ==17169==    by 0x404EC3: parse_object (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:252]: ==17169==    by 0x405346: parse_value (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:253]: ==17169==    by 0x40544E: parse_json (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:254]: ==17169==    by 0x4055DB: json_loads (in /class/cs241/private/mp/ag-full-sp13/mpx_client-autograde/test2)
+[finest]: [stderr:255]: ==17169==    by 0x402778: datastore_get (libds.c:276)
+[finest]: [stderr:256]: ==17169==    by 0x4037D3: main (test2.c:69)
+[finest]: [stderr:257]: ==17169== 
+[finest]: [stderr:258]: ==17169== LEAK SUMMARY:
+[finest]: [stderr:259]: ==17169==    definitely lost: 457 bytes in 11 blocks
+[finest]: [stderr:260]: ==17169==    indirectly lost: 1,045 bytes in 47 blocks
+[finest]: [stderr:261]: ==17169==      possibly lost: 0 bytes in 0 blocks
+[finest]: [stderr:262]: ==17169==    still reachable: 0 bytes in 0 blocks
+[finest]: [stderr:263]: ==17169==         suppressed: 0 bytes in 0 blocks
+[finest]: [stderr:264]: ==17169== 
+[finest]: [stderr:265]: ==17169== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:266]: ==17169== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "ERROR SUMMARY: 1 errors from 1 contexts" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_client-autograde/example_nosql_server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: HTTP: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: NoSQL: PUT request for "new_key"
+[finest]: [stderr:3]: NoSQL (PUT): Adding to the database "new_key"="new_value".
+[finest]: [stderr:4]: SENDING >>HTTP/1.1 201 Created
+[finest]: [stderr:5]: Etag: "1"
+[finest]: [stderr:6]: Content-Type: applications/json
+[finest]: [stderr:7]: Content-Length: 36
+[finest]: [stderr:8]: Connection: keep-alive
+[finest]: [stderr:9]: 
+[finest]: [stderr:10]: {"ok":true,"id":"new_key","rev":"1"}<<
+[finest]: [stderr:11]: HTTP: GET /new_key HTTP/1.1
+[finest]: [stderr:12]: NoSQL: GET request for "new_key"
+[finest]: [stderr:13]: NoSQL (GET): "new_key" contains the value "new_value" (revision: 1)
+[finest]: [stderr:14]: SENDING >>HTTP/1.1 200 OK
+[finest]: [stderr:15]: Etag: "1"
+[finest]: [stderr:16]: Content-Type: applications/json
+[finest]: [stderr:17]: Content-Length: 48
+[finest]: [stderr:18]: Connection: keep-alive
+[finest]: [stderr:19]: 
+[finest]: [stderr:20]: {"_id":"new_key","_rev":"1","Value":"new_value"}<<
+[warning]: Not all memory was freed by target program!
+[finer]: Running command [make clean] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: rm -rf *.o *.d test1
+[fine]: The assignment-specific grade() method completed successfully.
+[info]: The submission in "../../svn/cs241/tzhang46" for assignment "mpx_client" has finished grading. Running final tasks...

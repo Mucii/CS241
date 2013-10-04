@@ -1,0 +1,541 @@
+== CS 241 Autograder Note: ==
+This autograder is a preliminary assessment of your program's correctness. Your
+grade may change UP OR DOWN based on the CORRECTNESS OF YOUR PROGRAM. We make every effort to ensure
+that our autograder is 'smart' enough to not count off for simple things like grammar but, in doing so,
+we may inadvertently allow for incorrect code to be counted as correct. If we have to change our script
+to better reflect the CORRECTNESS OF YOUR PROGRAM, we will run the script on EVERY PROGRAM and update
+EVERY AUTOGRADER OUTPUT to ensure fairness to all students. Thanks for understanding! - CS 241 Staff
+
+(Please note, this autograder does not reflect a late submission penalty. This will be applied on Compass.)
+
+
+=== MPx (Server) Autograder Summary ===
+Program Execution Score (90% weight): 30.0/35.0 (85.71429%)
+Program Heap Freed (5% weight): PASSED (100%)
+Correct Memory Usage (5% weight): PASSED (100%)
+
+
+=== MPx (Server) Scoring Breakdown ===
+--- Details for "MPx (Server)" ---
+Total "MPx (Server)" Sub-Score: 30.0
+	... Details for "MPx (Server)", "Is the GET operation performed correctly?"...
+	Total "MPx (Server)", "Is the GET operation performed correctly?" Sub-Score: 5.0
+		[+5]: GET request succeeded on the server side!
+	... Details for "MPx (Server)", "Is an erroneous GET operation performed correctly?"...
+	Total "MPx (Server)", "Is an erroneous GET operation performed correctly?" Sub-Score: 5.0
+		[+5]: GET request succeeded on the server side!
+	... Details for "MPx (Server)", "Is the PUT operation performed correctly?"...
+	Total "MPx (Server)", "Is the PUT operation performed correctly?" Sub-Score: 5.0
+		[+5]: PUT request succeeded on the server side!
+	... Details for "MPx (Server)", "Is an erroneous PUT operation performed correctly?"...
+	Total "MPx (Server)", "Is an erroneous PUT operation performed correctly?" Sub-Score: 5.0
+		[+5]: PUT request succeeded on the server side!
+	... Details for "MPx (Server)", "Is an UPDATE operation performed correctly?"...
+	Total "MPx (Server)", "Is an UPDATE operation performed correctly?" Sub-Score: 5.0
+		[+5]: UPDATE request succeeded on the server side!
+	... Details for "MPx (Server)", "Is a DELETE operation performed correctly?"...
+	Total "MPx (Server)", "Is a DELETE operation performed correctly?" Sub-Score: 0.0
+		Expected output NOT found! Will try this exact same test again, up to three times!
+		Expected output NOT found! Will try this exact same test again, up to three times!
+		Expected output NOT found! Will try this exact same test again, up to three times!
+	... Details for "MPx (Server)", "Is an erroneous DELETE operation performed correctly?"...
+	Total "MPx (Server)", "Is an erroneous DELETE operation performed correctly?" Sub-Score: 5.0
+		[+5]: DELETE request succeeded on the server side!
+
+
+
+
+=== MPx (Server) Raw Autograder Log ===
+[config]: Initializing the AssignmentGrader class "mpx_server"...
+[config]: Initializing the SegmentGrader class "mpx_server_1". Loading...
+[config]: Assignment initalization complete!
+[info]: The submission in "../../svn/cs241/tzhang46" for assignment "mpx_server" is ready to be graded. Running grading tasks...
+[info]: Beginning to grade assignment "MPx (Server)"...
+[fine]: Launching assignment-specific code for "MPx (Server)", "MPx (Server)"...
+[finer]: Running command [make] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: gcc -c -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds libmapreduce.c -o libmapreduce.o -Llibjson -lpthread -ljson
+[finest]: [stdout:2]: gcc -c -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds libds_r/libds.c -o libds_r.o -Llibjson -lpthread -ljson
+[finest]: [stdout:3]: gcc -c -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds ../mp8/libhttp.c -o libhttp.o -Llibjson -lpthread -ljson
+[finest]: [stdout:4]: gcc -c -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds ../mp8/libdictionary.c -o libdictionary.o -Llibjson -lpthread -ljson
+[finest]: [stdout:5]: gcc -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds_r libmapreduce.o libds_r.o libhttp.o libdictionary.o test2.c -o test2 -Llibjson -lpthread -ljson
+[finest]: [stdout:6]: gcc -c -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds libds/libds.c -o libds.o -Llibjson -lpthread -ljson
+[finest]: [stdout:7]: gcc -g -W -Wall -I. -I../mp8 -Ilibjson -Ilibds libds.o libhttp.o libdictionary.o server.c -o server -Llibjson -lpthread -ljson
+[finest]: [stderr:1]: libmapreduce.c: In function âprocess_key_valueâ:
+[finest]: [stderr:2]: libmapreduce.c:63: warning: passing argument 1 of âfreeâ discards qualifiers from pointer target type
+[finest]: [stderr:3]: /usr/include/stdlib.h:488: note: expected âvoid *â but argument is of type âconst char *â
+[finest]: [stderr:4]: libmapreduce.c:64: warning: passing argument 1 of âfreeâ discards qualifiers from pointer target type
+[finest]: [stderr:5]: /usr/include/stdlib.h:488: note: expected âvoid *â but argument is of type âconst char *â
+[finest]: [stderr:6]: libmapreduce.c:72: warning: passing argument 1 of âfreeâ discards qualifiers from pointer target type
+[finest]: [stderr:7]: /usr/include/stdlib.h:488: note: expected âvoid *â but argument is of type âconst char *â
+[finest]: [stderr:8]: libmapreduce.c:73: warning: passing argument 1 of âfreeâ discards qualifiers from pointer target type
+[finest]: [stderr:9]: /usr/include/stdlib.h:488: note: expected âvoid *â but argument is of type âconst char *â
+[finest]: [stderr:10]: libmapreduce.c: In function âworkerâ:
+[finest]: [stderr:11]: libmapreduce.c:220: warning: unused variable âiuuuuuuuuuuuuuuuuâ
+[finest]: [stderr:12]: libds_r/libds.c: In function âdatastore_initâ:
+[finest]: [stderr:13]: libds_r/libds.c:71: warning: passing argument 2 of âconnectâ from incompatible pointer type
+[finest]: [stderr:14]: /usr/include/sys/socket.h:129: note: expected âconst struct sockaddr *â but argument is of type âstruct sockaddr_in *â
+[finest]: [stderr:15]: test2.c: In function âmainâ:
+[finest]: [stderr:16]: test2.c:58: warning: assignment discards qualifiers from pointer target type
+[fine]: Launching segment-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)"...
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is the GET operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 20605] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 20605 GET] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"new_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]: ds: 0x7fffd6be2d20
+[finest]: [stdout:12]:  ** SENDING **
+[finest]: [stdout:13]: GET /new_key HTTP/1.1
+[finest]: [stdout:14]: 
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]:  ** WAITING FOR RESP **
+[finest]: [stdout:17]: Status: [HTTP/1.1 200 OK]
+[finest]: [stdout:18]: Body: [{"_id":"new_key","_rev":"1","Value":"new_value"}]
+[finest]: [stdout:19]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 19 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[warning]: Unable to continue recording process output! (Stream closed)
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"new_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: GET /new_key HTTP/1.1
+[finest]: [stderr:15]: (null)
+[finest]: [stderr:16]: requestGET /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: GET
+[finest]: [stderr:19]: HTTP/1.1 200 OK
+[finest]: [stderr:20]: Etag: "1"
+[finest]: [stderr:21]: Content-Type: application/json
+[finest]: [stderr:22]: Content-Length: 48
+[finest]: [stderr:23]: Connection: keep-alive
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: 
+[finest]: [stderr:26]: {"_id":"new_key","_rev":"1","Value":"new_value"}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is an erroneous GET operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 27670] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 27670 ERR_GET] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]: ds: 0x7fff73c0a390
+[finest]: [stdout:2]:  ** SENDING **
+[finest]: [stdout:3]: GET /no_key HTTP/1.1
+[finest]: [stdout:4]: 
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]:  ** WAITING FOR RESP **
+[finest]: [stdout:7]: Status: [HTTP/1.1 404 Not Found]
+[finest]: [stdout:8]: Body: [{"error":"not found","reason":"The key does not exist in the database."}]
+[finest]: [stdout:9]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 9 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: GET /no_key HTTP/1.1
+[finest]: [stderr:2]: (null)
+[finest]: [stderr:3]: requestGET /no_key HTTP/1.1
+[finest]: [stderr:4]: key:no_key
+[finest]: [stderr:5]: operation: GET
+[finest]: [stderr:6]: headerlen: 174
+[finest]: [stderr:7]: HTTP/1.1 404 Not Found
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 72
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"error":"not found","reason":"The key does not exist in the database."}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is the PUT operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 14451] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 14451 PUT] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"new_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 11 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"new_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is an erroneous PUT operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 22541] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 22541 ERR_PUT] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"new_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: PUT /new_key HTTP/1.1
+[finest]: [stdout:13]: Content-Length: 23
+[finest]: [stdout:14]: Content-Type: application/json
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]: 
+[finest]: [stdout:17]: { "Value":"new_value" }
+[finest]: [stdout:18]:  ** WAITING FOR RESP **
+[finest]: [stdout:19]: Status: [HTTP/1.1 409 Conflict]
+[finest]: [stdout:20]: Body: [{"error":"conflict","reason":"Document update conflict."}]
+[finest]: [stdout:21]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 21 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"new_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: PUT /new_key HTTP/1.1
+[finest]: [stderr:15]: { "Value":"new_value" }
+[finest]: [stderr:16]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: PUT
+[finest]: [stderr:19]: HTTP/1.1 409 Conflict
+[finest]: [stderr:20]: Content-Type: application/json
+[finest]: [stderr:21]: Content-Length: 57
+[finest]: [stderr:22]: Connection: keep-alive
+[finest]: [stderr:23]: 
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: {"error":"conflict","reason":"Document update conflict."}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is an UPDATE operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 17186] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 17186 UPDATE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"old_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: PUT /new_key HTTP/1.1
+[finest]: [stdout:13]: Content-Length: 35
+[finest]: [stdout:14]: Content-Type: application/json
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]: 
+[finest]: [stdout:17]: { "Value":"new_value", "_rev":"1" }
+[finest]: [stdout:18]:  ** WAITING FOR RESP **
+[finest]: [stdout:19]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:20]: Body: [{"ok":true,"rev":"2","id":"new_key"}]
+[finest]: [stdout:21]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 21 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"old_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: PUT /new_key HTTP/1.1
+[finest]: [stderr:15]: { "Value":"new_value", "_rev":"1" }
+[finest]: [stderr:16]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: PUT
+[finest]: [stderr:19]: HTTP/1.1 201 Created
+[finest]: [stderr:20]: Etag: "2"
+[finest]: [stderr:21]: Content-Type: application/json
+[finest]: [stderr:22]: Content-Length: 36
+[finest]: [stderr:23]: Connection: keep-alive
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: 
+[finest]: [stderr:26]: {"ok":true,"rev":"2","id":"new_key"}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is a DELETE operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 16909] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 16909 DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"old_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: DELETE /new_key HTTP/1.1
+[finest]: [stdout:13]: If-Match: "1"
+[finest]: [stdout:14]: 
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]:  ** WAITING FOR RESP **
+[finest]: [stdout:17]: Status: [HTTP/1.1 409 Conflict]
+[finest]: [stdout:18]: Body: [{"error":"conflict","reason":"Revision number was out of date."}]
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String was not found in process output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"old_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: DELETE /new_key HTTP/1.1
+[finest]: [stderr:15]: (null)
+[finest]: [stderr:16]: requestDELETE /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: DELETE
+[finest]: [stderr:19]: HTTP/1.1 409 Conflict
+[finest]: [stderr:20]: Content-Type: application/json
+[finest]: [stderr:21]: Content-Length: 64
+[finest]: [stderr:22]: Connection: keep-alive
+[finest]: [stderr:23]: 
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: {"error":"conflict","reason":"Revision number was out of date."}
+[finer]: Running command [mpx_server-autograde/server 17407] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 127.0.0.1 17407 DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"old_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: DELETE /new_key HTTP/1.1
+[finest]: [stdout:13]: If-Match: "1"
+[finest]: [stdout:14]: 
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]:  ** WAITING FOR RESP **
+[finest]: [stdout:17]: Status: [HTTP/1.1 409 Conflict]
+[finest]: [stdout:18]: Body: [{"error":"conflict","reason":"Revision number was out of date."}]
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String was not found in process output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Stream closed)
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"old_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: DELETE /new_key HTTP/1.1
+[finest]: [stderr:15]: (null)
+[finest]: [stderr:16]: requestDELETE /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: DELETE
+[finest]: [stderr:19]: HTTP/1.1 409 Conflict
+[finest]: [stderr:20]: Content-Type: application/json
+[finest]: [stderr:21]: Content-Length: 64
+[finest]: [stderr:22]: Connection: keep-alive
+[finest]: [stderr:23]: 
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: {"error":"conflict","reason":"Revision number was out of date."}
+[finer]: Running command [mpx_server-autograde/server 24445] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 127.0.0.1 24445 DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"old_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: DELETE /new_key HTTP/1.1
+[finest]: [stdout:13]: If-Match: "1"
+[finest]: [stdout:14]: 
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]:  ** WAITING FOR RESP **
+[finest]: [stdout:17]: Status: [HTTP/1.1 409 Conflict]
+[finest]: [stdout:18]: Body: [{"error":"conflict","reason":"Revision number was out of date."}]
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String was not found in process output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"old_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: DELETE /new_key HTTP/1.1
+[finest]: [stderr:15]: (null)
+[finest]: [stderr:16]: requestDELETE /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: DELETE
+[finest]: [stderr:19]: HTTP/1.1 409 Conflict
+[finest]: [stderr:20]: Content-Type: application/json
+[finest]: [stderr:21]: Content-Length: 64
+[finest]: [stderr:22]: Connection: keep-alive
+[finest]: [stderr:23]: 
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: {"error":"conflict","reason":"Revision number was out of date."}
+[fine]: Launching element-specific code for "MPx (Server)", "MPx (Server)", "MPx (Server)", "Is an erroneous DELETE operation performed correctly?"...
+[finer]: Running command [mpx_server-autograde/server 27713] with a timeout of 15000ms.
+[finer]: Running command [mpx_server-autograde/test2 localhost 27713 ERR_DELETE] with a timeout of 15000ms.
+[finer]: Completed execution of "mpx_server-autograde/test2" with exit code = 0.
+[finest]: [stdout:1]:  ** SENDING **
+[finest]: [stdout:2]: PUT /new_key HTTP/1.1
+[finest]: [stdout:3]: Content-Length: 23
+[finest]: [stdout:4]: Content-Type: application/json
+[finest]: [stdout:5]: 
+[finest]: [stdout:6]: 
+[finest]: [stdout:7]: { "Value":"old_value" }
+[finest]: [stdout:8]:  ** WAITING FOR RESP **
+[finest]: [stdout:9]: Status: [HTTP/1.1 201 Created]
+[finest]: [stdout:10]: Body: [{"ok":true,"rev":"1","id":"new_key"}]
+[finest]: [stdout:11]:  ** SENDING **
+[finest]: [stdout:12]: DELETE /new_key HTTP/1.1
+[finest]: [stdout:13]: If-Match: "0"
+[finest]: [stdout:14]: 
+[finest]: [stdout:15]: 
+[finest]: [stdout:16]:  ** WAITING FOR RESP **
+[finest]: [stdout:17]: Status: [HTTP/1.1 409 Conflict]
+[finest]: [stdout:18]: Body: [{"error":"conflict","reason":"Revision number was out of date."}]
+[finest]: [stdout:19]: Correct value returned
+[finer]: Testing for string "Correct value returned" in process output.
+[finer]: String found in line 19 of standard output.
+[config]: Allowing the autograder to kill the server; this will result in autograder errors that are expected.
+[severe]: Process was forcibly killed by the autograder after exceeding the timeout period.
+[finer]: Completed execution of "mpx_server-autograde/server" with exit code = 143.
+[warning]: Unable to continue recording process output! (Bad file descriptor)
+[warning]: Unable to continue recording process output! (Stream closed)
+[finest]: [stderr:1]: PUT /new_key HTTP/1.1
+[finest]: [stderr:2]: { "Value":"old_value" }
+[finest]: [stderr:3]: requestPUT /new_key HTTP/1.1
+[finest]: [stderr:4]: key:new_key
+[finest]: [stderr:5]: operation: PUT
+[finest]: [stderr:6]: HTTP/1.1 201 Created
+[finest]: [stderr:7]: Etag: "1"
+[finest]: [stderr:8]: Content-Type: application/json
+[finest]: [stderr:9]: Content-Length: 36
+[finest]: [stderr:10]: Connection: keep-alive
+[finest]: [stderr:11]: 
+[finest]: [stderr:12]: 
+[finest]: [stderr:13]: {"ok":true,"rev":"1","id":"new_key"}
+[finest]: [stderr:14]: DELETE /new_key HTTP/1.1
+[finest]: [stderr:15]: (null)
+[finest]: [stderr:16]: requestDELETE /new_key HTTP/1.1
+[finest]: [stderr:17]: key:new_key
+[finest]: [stderr:18]: operation: DELETE
+[finest]: [stderr:19]: HTTP/1.1 409 Conflict
+[finest]: [stderr:20]: Content-Type: application/json
+[finest]: [stderr:21]: Content-Length: 64
+[finest]: [stderr:22]: Connection: keep-alive
+[finest]: [stderr:23]: 
+[finest]: [stderr:24]: 
+[finest]: [stderr:25]: {"error":"conflict","reason":"Revision number was out of date."}
+[fine]: Launching memory grader code for "MPx (Server)"...
+[fine]: Launching memory grader code for "MPx (Server)"...
+[finer]: Running command [make clean] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: rm -rf *.o *.d test2 doc/html *~
+[fine]: The assignment-specific grade() method completed successfully.
+[info]: The submission in "../../svn/cs241/tzhang46" for assignment "mpx_server" has finished grading. Running final tasks...
